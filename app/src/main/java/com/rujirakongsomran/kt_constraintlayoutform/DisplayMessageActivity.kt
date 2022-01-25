@@ -13,10 +13,10 @@ class DisplayMessageActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-        val firstname = intent.getStringExtra(EXTRA_FIRSTNAME)
-        val lastname = intent.getStringExtra(EXTRA_LASTNAME)
-        val birthdate = intent.getStringExtra(EXTRA_BIRTHDATE)
-        val country = intent.getStringExtra(EXTRA_COUNTRY)
+        val firstname = intent.getStringExtra(EXTRA_FIRSTNAME).orEmpty()
+        val lastname = intent.getStringExtra(EXTRA_LASTNAME).orEmpty()
+        val birthdate = intent.getStringExtra(EXTRA_BIRTHDATE).orEmpty()
+        val country = intent.getStringExtra(EXTRA_COUNTRY).orEmpty()
 
         binding.tvFirstname.text = firstname
         binding.tvLastname.text = lastname
